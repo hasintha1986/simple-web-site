@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonials - Salon Éclat</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-40">
+        <!-- ... (copy navigation from main page) ... -->
+    </nav>
+
+    <!-- Testimonials Content -->
+    <section class="py-20 md:py-28 bg-pink-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-14">Client Stories</h2>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <!-- Testimonial Items -->
+                    <div class="swiper-slide">
+                        <div class="bg-white rounded-3xl p-8 md:p-10 shadow-xl">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 text-pink-600 mx-auto mb-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.234 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.366 48.366 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z" />
+                            </svg>
+                            <p class="text-gray-700 text-lg italic mb-6">"Transformative experience! My hair has never looked better - the attention to detail is unmatched."</p>
+                            <div class="text-center">
+                                <p class="font-semibold text-gray-800">Sarah Michelle</p>
+                                <p class="text-sm text-gray-600">CEO & Beauty Enthusiast</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Add more testimonials -->
+                </div>
+                <div class="swiper-pagination mt-10"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <!-- ... (copy footer from main page) ... -->
+    </footer>
+
+    <script>
+        new Swiper('.swiper-container', {
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            breakpoints: {
+                640: { slidesPerView: 1 },
+                768: { slidesPerView: 2, spaceBetween: 30 },
+                1024: { slidesPerView: 3, spaceBetween: 40 }
+            }
+        });
+    </script>
+</body>
+</html>

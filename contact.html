@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Salon Éclat</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-40">
+        <!-- ... (copy navigation from main page) ... -->
+    </nav>
+
+    <!-- Contact Content -->
+    <section class="py-20 md:py-28 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <div>
+                    <h3 class="text-3xl font-bold text-gray-900 mb-6">Visit Us</h3>
+                    <p class="text-gray-600 mb-4">
+                        123 Beauty Boulevard<br>
+                        Style City, SC 45678<br>
+                        <a href="tel:+1234567890" class="text-pink-600 hover:underline">(123) 456-7890</a>
+                    </p>
+                    <div class="map-placeholder bg-gray-200 rounded-lg h-64 mt-6 flex items-center justify-center text-gray-500 italic">
+                        Google Maps Embed Coming Soon
+                    </div>
+                </div>
+                <form id="contactForm" class="space-y-6">
+                    <div>
+                        <input type="text" placeholder="Full Name" required
+                            class="block w-full px-4 py-4 border-2 border-gray-200 rounded-lg 
+                            focus:outline-none focus:border-pink-600 transition-all">
+                    </div>
+                    <div>
+                        <input type="email" placeholder="Email Address" required
+                            class="block w-full px-4 py-4 border-2 border-gray-200 rounded-lg 
+                            focus:outline-none focus:border-pink-600 transition-all">
+                    </div>
+                    <div>
+                        <textarea placeholder="Your Message" rows="4" required
+                            class="block w-full px-4 py-4 border-2 border-gray-200 rounded-lg 
+                            focus:outline-none focus:border-pink-600 transition-all"></textarea>
+                    </div>
+                    <button type="submit" class="cta-button w-full">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <!-- ... (copy footer from main page) ... -->
+    </footer>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            confetti({
+                particleCount: 100,
+                spread: 70,
+                origin: { y: 0.6 }
+            });
+            alert('Thank you! Your message has been sent successfully.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>

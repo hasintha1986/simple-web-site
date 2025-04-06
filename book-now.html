@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment - Salon Éclat</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-40">
+        <!-- ... (copy navigation from main page) ... -->
+    </nav>
+
+    <!-- Booking Form -->
+    <section class="py-20 md:py-28 bg-white">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-14">Book Your Transformation</h2>
+            <form x-data="{ service: '', date: '', time: '' }" class="space-y-8">
+                <div>
+                    <label for="service" class="block text-gray-700 mb-2">Select Service</label>
+                    <select x-model="service" id="service" required 
+                        class="block w-full px-4 py-4 border-2 border-gray-200 rounded-lg 
+                        focus:outline-none focus:border-pink-600 transition-all">
+                        <option value="">Choose Service</option>
+                        <option value="hair">Hair Styling</option>
+                        <option value="facial">Rejuvenating Facial</option>
+                        <option value="nails">Manicure & Pedicure</option>
+                        <option value="makeup">Makeup Artistry</option>
+                    </select>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label for="date" class="block text-gray-700 mb-2">Preferred Date</label>
+                        <input type="date" x-model="date" required
+                            class="block w-full px-4 py-4 border-2 border-gray-200 rounded-lg 
+                            focus:outline-none focus:border-pink-600 transition-all">
+                    </div>
+                    <div>
+                        <label for="time" class="block text-gray-700 mb-2">Preferred Time</label>
+                        <input type="time" x-model="time" required
+                            class="block w-full px-4 py-4 border-2 border-gray-200 rounded-lg 
+                            focus:outline-none focus:border-pink-600 transition-all">
+                    </div>
+                </div>
+                <div>
+                    <label for="notes" class="block text-gray-700 mb-2">Additional Notes</label>
+                    <textarea id="notes" rows="4"
+                        class="block w-full px-4 py-4 border-2 border-gray-200 rounded-lg 
+                        focus:outline-none focus:border-pink-600 transition-all"></textarea>
+                </div>
+                <button type="submit" class="cta-button w-full">Confirm Booking</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <!-- ... (copy footer from main page) ... -->
+    </footer>
+</body>
+</html>

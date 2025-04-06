@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Salon Éclat</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+        body { font-family: 'Poppins', sans-serif; }
+        .gallery-item { @apply bg-gray-100 rounded-2xl overflow-hidden transition-all duration-300 hover:scale-105; }
+        .gallery-item:hover .overlay { @apply opacity-100; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased">
+    <!-- Navigation (same as main page) -->
+    <nav class="bg-white shadow-sm sticky top-0 z-40">
+        <!-- ... (copy navigation from main page) ... -->
+    </nav>
+
+    <!-- Gallery Content -->
+    <section class="py-20 md:py-28 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-14">Our Visual Journey</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <!-- Gallery Items -->
+                <div class="gallery-item aspect-square relative">
+                    <div class="absolute inset-0 bg-gradient-to-br from-pink-100 to-rose-200 shimmer"></div>
+                    <div class="overlay absolute inset-0 bg-black/20 opacity-0 transition-all duration-300"></div>
+                </div>
+                <!-- Repeat 7 more times for full grid -->
+            </div>
+            <div class="text-center mt-10">
+                <button class="text-pink-600 font-medium hover:underline">View Full Gallery (Coming Soon)</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (same as main page) -->
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <!-- ... (copy footer from main page) ... -->
+    </footer>
+</body>
+</html>
